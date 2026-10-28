@@ -1,75 +1,158 @@
-# React + TypeScript + Vite
+# 🎓 CampusFlow — College Website Template Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Build beautiful, personalized college websites without starting from scratch.**
 
-Currently, two official plugins are available:
+CampusFlow is a modern, customizable college website template builder designed to help users explore website layouts, personalize college branding, and preview a college website with their own content.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🎨 **Customizable Branding** — Personalize the college name, tagline, description, and theme colors.
+- 🏫 **College Website Templates** — Explore college website designs and customize a selected template.
+- 👀 **Live Website Preview** — Preview the generated college website before finalizing your design.
+- 📚 **Department Showcase** — Display academic departments and programs dynamically.
+- 📝 **Admissions Enquiry Form** — Interactive enquiry form with input validation and a success screen.
+- 📱 **Responsive Design** — Layouts designed to work across desktop and mobile screen sizes.
+- ⚡ **Fast Development** — Powered by Vite and React for a smooth development experience.
+- 🧩 **Reusable Components** — Built with reusable React components and TypeScript.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🖥️ Preview
 
-## Expanding the ESLint configuration
+CampusFlow lets you customize a college website and preview key sections, including:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Home and hero section
+- About the college
+- Academic departments
+- Admissions call to action
+- Contact information and footer
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+| Technology   | Purpose                              |
+| ------------ | ------------------------------------ |
+| React        | Component-based user interface       |
+| TypeScript   | Type-safe development                |
+| Vite         | Development server and build tooling |
+| Tailwind CSS | Utility-first styling                |
+| Lucide React | Icons                                |
+| Git & GitHub | Version control and project hosting  |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Getting Started
 
+Follow these steps to run CampusFlow locally.
+
+### Prerequisites
+
+Install the following:
+
+- [Node.js](https://nodejs.org/)
+- npm, included with Node.js
+- [Git](https://git-scm.com/)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Vidyashreegsm/CampusFlow.git
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Navigate to the project
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd CampusFlow
 ```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+To check the production build locally, run:
+
+```bash
+npm run preview
+```
+
+## 📂 Project Structure
+
+```text
+CampusFlow/
+├── public/
+│   └── icons.svg
+├── src/
+│   ├── assets/
+│   ├── App.tsx
+│   ├── App.css
+│   ├── Customizer.tsx
+│   ├── GeneratedWebsite.tsx
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+## 🧭 How It Works
+
+1. **Explore:** Browse the available college website templates.
+2. **Customize:** Choose a template and personalize its branding and content.
+3. **Preview:** View the generated college website with your custom settings.
+4. **Enquire:** Test the interactive admissions enquiry form.
+
+## 🎯 Project Goals
+
+CampusFlow aims to simplify the initial process of creating a college website by providing customizable templates and an interactive preview experience.
+
+It is also a learning project focused on modern frontend development, reusable components, responsive UI design, and state management with React.
+
+## 🔮 Future Improvements
+
+- [ ] Export customized websites as downloadable projects.
+- [ ] Add more college website templates.
+- [ ] Save and restore multiple website designs.
+- [ ] Connect admissions enquiries to a backend database.
+- [ ] Add user authentication and a personal dashboard.
+- [ ] Deploy a live version of CampusFlow.
+
+## ⚠️ Current Limitations
+
+- The admissions enquiry form is currently a frontend demo. It does not send emails or save submissions to a backend.
+- College contact details and statistics shown in the generated website are sample content and should be replaced with verified information.
+- A live public deployment and downloadable website export are future improvements.
+
+## 👩‍💻 Author
+
+**Vidya Shree G S**
+
+- GitHub: [@Vidyashreegsm](https://github.com/Vidyashreegsm)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/vidya-shree-g-s-3a2678307/)
+
+## 📄 License
+
+This project is open source and available under the [MIT License](https://opensource.org/license/mit), subject to adding an appropriate `LICENSE` file to the repository.
+
+---
+
+⭐ **If you find CampusFlow interesting, consider giving the repository a star!**
+
+*Built with React, TypeScript, and a passion for creating better web experiences.*
